@@ -9,7 +9,7 @@
 
 Name:           aegisub-plugin-dependency-control
 Version:        0.6.4~alpha
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Aegisub Script Manager
 License:        'MIT' 'ISC'
 URL:            https://github.com/TypesettingTools/DependencyControl
@@ -73,9 +73,14 @@ install -D -m644 LICENSE "%{buildroot}%{_datadir}/licenses/%{name}/LICENSE_luajs
 %license %{_datadir}/licenses/%{name}/LICENSE_ffi-experiments
 %license %{_datadir}/licenses/%{name}/LICENSE_luajson
 %doc README.md
-%{_datadir}/aegisub/automation
+%{_datadir}/aegisub/automation/include/*
+%{_datadir}/aegisub/automation/autoload/*
 
 
 %changelog
+* Fri Jun 27 2025 Tarulia <mihawk.90+git@googlemail.com> - 0.6.4~alpha-2
+- Use wildcards to disown automation directory
+
 * Fri Jun 27 2025 Tarulia <mihawk.90+git@googlemail.com>
-- 
+- Initial Package for version 0.6.4-alpha
+
