@@ -1,0 +1,6 @@
+# By default, ignore _all_ files, but not directories
+*
+
+# .. except my stuff
+!*.spec
+!build.sh
