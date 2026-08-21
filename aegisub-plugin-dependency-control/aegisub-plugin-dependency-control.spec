@@ -1,7 +1,7 @@
 %global srcname DependencyControl
 
 Name:           aegisub-plugin-dependency-control
-Version:        0.8.2
+Version:        0.9.0
 Release:        1%{?dist}
 Summary:        Enterprise Aegisub Script Management
 # vendored dkjson.lua also under MIT, see file header
@@ -28,7 +28,7 @@ Requires:       libcurl
 Requires:       openssl-libs
 
 # Yutils is now available via DepCtrl
-Obsoletes:      aegisub-plugin-yutils
+Obsoletes:      aegisub-plugin-yutils <= 0^20230725.91a4ac7
 
 
 %description
@@ -76,6 +76,9 @@ chmod -x,u=rwX,g=rX,o=rX -R "%{aegiauto}"
 
 
 %changelog
+* Fri Aug 21 2026 Tarulia <mihawk.90+git@googlemail.com> - 0.9.0-1
+- new version
+
 * Mon Aug 17 2026 Tarulia <mihawk.90+git@googlemail.com> - 0.8.2-1
 - new version
 
